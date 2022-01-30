@@ -11,7 +11,7 @@
 
 ### Deployment
 
-This application is deployed at https://disasterfix.tech
+This application is deployed at https://disasterfix.tech via netlify
 
 #### Available links:
 
