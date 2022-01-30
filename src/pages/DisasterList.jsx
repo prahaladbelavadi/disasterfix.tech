@@ -1,7 +1,10 @@
 import React from 'react';
 import { Button } from 'primereact/button';
+import { useNavigate } from 'react-router-dom';
 
 const DisasterList = () => {
+  const navigate = useNavigate();
+
   return (
     <div>
       <div className="surface-section px-4 py-5 md:px-6 lg:px-8">
@@ -24,9 +27,7 @@ const DisasterList = () => {
                   >
                     <i className="pi pi-globe text-xl text-green-600"></i>
                   </span>
-                  <span className="text-900 font-medium text-2xl">
-                    Card Title
-                  </span>
+                  <span className="text-900 font-medium text-2xl">Cyclone</span>
                 </div>
                 <div className="text-900 my-3 text-xl font-medium">
                   Quam adipiscing vitae proin sagittis.
@@ -42,6 +43,7 @@ const DisasterList = () => {
                   icon="pi pi-arrow-right"
                   label="More"
                   className="p-button-rounded p-button-success"
+                  onClick={() => navigate('/dashboard')}
                 />
               </div>
             </div>
@@ -56,9 +58,7 @@ const DisasterList = () => {
                   >
                     <i className="pi pi-globe text-xl text-yellow-600"></i>
                   </span>
-                  <span className="text-900 font-medium text-2xl">
-                    Card Title
-                  </span>
+                  <span className="text-900 font-medium text-2xl">Flood</span>
                 </div>
                 <div className="text-900 my-3 text-xl font-medium">
                   Proin libero nunci
@@ -71,9 +71,10 @@ const DisasterList = () => {
               </div>
               <div className="px-4 py-3 surface-100 text-right">
                 <Button
-                  icon="pi pi-download"
-                  label="Load"
-                  className="p-button-rounded p-button-warning"
+                  icon="pi pi-arrow-right"
+                  label="More"
+                  className="p-button-rounded p-button-success"
+                  onClick={() => navigate('/dashboard')}
                 />
               </div>
             </div>
@@ -88,9 +89,7 @@ const DisasterList = () => {
                   >
                     <i className="pi pi-globe text-xl text-purple-600"></i>
                   </span>
-                  <span className="text-900 font-medium text-2xl">
-                    Card Title
-                  </span>
+                  <span className="text-900 font-medium text-2xl">Volcano</span>
                 </div>
                 <div className="text-900 my-3 text-xl font-medium">
                   {' '}
@@ -104,9 +103,10 @@ const DisasterList = () => {
               </div>
               <div className="px-4 py-3 surface-100 text-right">
                 <Button
-                  icon="pi pi-bookmark"
-                  label="Save"
-                  className="p-button-rounded p-button-help"
+                  icon="pi pi-arrow-right"
+                  label="More"
+                  className="p-button-rounded p-button-success"
+                  onClick={() => navigate('/dashboard')}
                 />
               </div>
             </div>

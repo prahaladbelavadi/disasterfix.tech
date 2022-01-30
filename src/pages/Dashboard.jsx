@@ -3,8 +3,7 @@ import { InputText } from 'primereact/inputtext';
 import { Badge } from 'primereact/badge';
 import { StyleClass } from 'primereact/styleclass';
 import { Ripple } from 'primereact/ripple';
-import TrainingVideoElement from "../components/TrainingVideoElement";
-
+import TrainingVideoElement from '../components/TrainingVideoElement';
 
 const Dashboard = () => {
   const btnRef1 = useRef(null);
@@ -59,82 +58,6 @@ const Dashboard = () => {
                   <span className="font-medium">Bookmarks</span>
                   <Ripple />
                 </a>
-              </li>
-              <li>
-                <StyleClass
-                  nodeRef={btnRef1}
-                  selector="@next"
-                  enterClassName="hidden"
-                  enterActiveClassName="slidedown"
-                  leaveToClassName="hidden"
-                  leaveActiveClassName="slideup"
-                >
-                  <a
-                    ref={btnRef1}
-                    className="p-ripple flex align-items-center cursor-pointer p-3 hover:bg-bluegray-900 border-round text-bluegray-100 hover:text-bluegray-50
-                    transition-duration-150 transition-colors w-full"
-                  >
-                    <i className="pi pi-chart-line mr-2"></i>
-                    <span className="font-medium">Reports</span>
-                    <i className="pi pi-chevron-down ml-auto mr-1"></i>
-                    <Ripple />
-                  </a>
-                </StyleClass>
-                <ul className="list-none py-0 pl-3 pr-0 m-0 hidden overflow-y-hidden transition-all transition-duration-400 transition-ease-in-out">
-                  <li>
-                    <StyleClass
-                      nodeRef={btnRef2}
-                      selector="@next"
-                      enterClassName="hidden"
-                      enterActiveClassName="slidedown"
-                      leaveToClassName="hidden"
-                      leaveActiveClassName="slideup"
-                    >
-                      <a
-                        ref={btnRef2}
-                        className="p-ripple flex align-items-center cursor-pointer p-3 hover:bg-bluegray-900 border-round text-bluegray-100 hover:text-bluegray-50
-                        transition-duration-150 transition-colors w-full"
-                      >
-                        <i className="pi pi-chart-line mr-2"></i>
-                        <span className="font-medium">Revenue</span>
-                        <i className="pi pi-chevron-down ml-auto mr-1"></i>
-                        <Ripple />
-                      </a>
-                    </StyleClass>
-                    <ul className="list-none py-0 pl-3 pr-0 m-0 hidden overflow-y-hidden transition-all transition-duration-400 transition-ease-in-out">
-                      <li>
-                        <a
-                          className="p-ripple flex align-items-center cursor-pointer p-3 hover:bg-bluegray-900 border-round text-bluegray-100 hover:text-bluegray-50
-                                transition-duration-150 transition-colors w-full"
-                        >
-                          <i className="pi pi-table mr-2"></i>
-                          <span className="font-medium">View</span>
-                          <Ripple />
-                        </a>
-                      </li>
-                      <li>
-                        <a
-                          className="p-ripple flex align-items-center cursor-pointer p-3 hover:bg-bluegray-900 border-round text-bluegray-100 hover:text-bluegray-50
-                                transition-duration-150 transition-colors w-full"
-                        >
-                          <i className="pi pi-search mr-2"></i>
-                          <span className="font-medium">Search</span>
-                          <Ripple />
-                        </a>
-                      </li>
-                    </ul>
-                  </li>
-                  <li>
-                    <a
-                      className="p-ripple flex align-items-center cursor-pointer p-3 hover:bg-bluegray-900 border-round text-bluegray-100 hover:text-bluegray-50
-                        transition-duration-150 transition-colors w-full"
-                    >
-                      <i className="pi pi-chart-line mr-2"></i>
-                      <span className="font-medium">Expenses</span>
-                      <Ripple />
-                    </a>
-                  </li>
-                </ul>
               </li>
               <li>
                 <a

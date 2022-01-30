@@ -90,10 +90,10 @@ const TrainingVideoElement = () => {
             </div>
           </div>
         </div>
-        <div
+        {/* <div
           style={{ height: '150px' }}
           className="border-2 border-dashed surface-border"
-        ></div>
+        ></div> */}
       </div>
     </div>
   );
