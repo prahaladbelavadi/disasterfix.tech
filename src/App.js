@@ -5,6 +5,7 @@ import LandingPage from './pages/LandingPage';
 import DisasterList from './pages/DisasterList';
 import Dashboard from './pages/Dashboard';
 import Login from './pages/Login';
+import Register from './pages/Register';
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
         <Route path="/disasters" element={<DisasterList />} />
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/login" element={<Login/>}/>
+        <Route path="/register" element={<Register/>}/>
       </Routes>
       </BrowserRouter>
     </div>

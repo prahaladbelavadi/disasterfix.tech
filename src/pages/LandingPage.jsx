@@ -149,7 +149,7 @@ const LandingPage = () => {
               label="Register"
               className="ml-3 p-button-outlined font-bold"
               onClick={() => {
-                navigate('/login');
+                navigate('/register');
               }}
             />
           </div>
