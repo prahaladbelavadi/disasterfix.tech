@@ -1,6 +1,6 @@
 // import logo from './logo.svg';
 import './App.css';
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, Route, Routes, Redirect, Navigate } from "react-router-dom";
 import LandingPage from './pages/LandingPage';
 import DisasterList from './pages/DisasterList';
 import Dashboard from './pages/Dashboard';
@@ -18,7 +18,10 @@ function App() {
         <Route path="/dashboard" element={<Dashboard/>}/>
         <Route path="/login" element={<Login/>}/>
         <Route path="/register" element={<Register/>}/>
-      </Routes>
+        <Route
+        path="*"
+        element={<Navigate to="/" />}
+    />      </Routes>
       </BrowserRouter>
     </div>
   );

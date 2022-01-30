@@ -8,6 +8,7 @@ import { Dropdown } from 'primereact/dropdown';
 import { Calendar } from 'primereact/calendar';
 import { InputNumber } from 'primereact/inputnumber';
 import { InputSwitch } from 'primereact/inputswitch';
+import { useNavigate } from 'react-router-dom';
 
 const Register = () => {
   const [value, setValue] = useState(false);
@@ -28,6 +29,8 @@ const Register = () => {
     { name: 'Spain', code: 'ES' },
     { name: 'United States', code: 'US' },
   ];
+
+  const navigate = useNavigate();
 
   return (
     <div>
@@ -139,7 +142,13 @@ const Register = () => {
             </div>
             <div className="surface-border border-top-1 opacity-50 mb-3 col-12"></div>
             <div className="col-12">
-              <Button label="Save Changes" className="w-auto mt-3" />
+              <Button
+                label="Save Changes"
+                className="w-auto mt-3"
+                onClick={() => {
+                  navigate('/dashboard');
+                }}
+              />
             </div>
           </div>
         </div>

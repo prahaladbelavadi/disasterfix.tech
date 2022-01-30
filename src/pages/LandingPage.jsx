@@ -318,6 +318,7 @@ const LandingPage = () => {
             <Button
               label="Get Started"
               className="font-bold px-5 py-3 p-button-warning p-button-rounded p-button-raised white-space-nowrap"
+              onClick={() => navigate('/register')}
             />
           </div>
         </div>
@@ -430,7 +431,9 @@ const LandingPage = () => {
               <div className="text-white font-bold line-height-3 mb-3">
                 Resourses
               </div>
-              <a className="text-white line-height-3 block cursor-pointer mb-2">
+              <a
+                className="text-white line-height-3 block cursor-pointer mb-2"
+              >
                 Get Started
               </a>
               <a className="text-white line-height-3 block cursor-pointer mb-2">
