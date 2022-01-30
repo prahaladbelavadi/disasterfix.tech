@@ -21,6 +21,13 @@ This application is deployed at https://disasterfix.tech via netlify
 - https://disasterfix.tech/dashboard
 - https://disasterfix.tech/disasters
 
+### Team Mates:
+
+- Angelina [github](https://github.com/angelinahand) [discord](angiee #8362)
+- Arjun Panwar [github](https://github.com/arjunpanwar2005) [discord](Harry Potter #6598) [email](arjun30panwar@gmail.com)
+- Prahalad Belavadi [github](https://github.com/prahaladbelavadi) [discord]( prahaladbelavadi #0010) [email](major-league-hacking@belavadi.com)
+- Ishabh [discord](Ishabh_Thakur #9482)
+
 
 ## Available Scripts
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
