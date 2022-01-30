@@ -6,6 +6,7 @@ import { InputTextarea } from 'primereact/inputtextarea';
 import { InputSwitch } from 'primereact/inputswitch';
 import { StyleClass } from 'primereact/styleclass';
 import { Ripple } from 'primereact/ripple';
+import { useNavigate } from 'react-router-dom';
 
 const LandingPage = () => {
   const [value, setValue] = useState(false);
@@ -14,32 +15,12 @@ const LandingPage = () => {
   const btnRef2 = useRef(null);
   const btnRef3 = useRef(null);
   const btnRef4 = useRef(null);
+  const navigate = useNavigate();
 
   return (
     <div>
-      <div className="bg-bluegray-900 text-gray-100 p-3 flex justify-content-between lg:justify-content-center align-items-center flex-wrap">
-        <div className="font-bold mr-8">🔥 Hot Deals!</div>
-        <div className="align-items-center hidden lg:flex">
-          <span className="line-height-3">
-            Libero voluptatum atque exercitationem praesentium provident odit.
-          </span>
-        </div>
-        <a className="flex align-items-center ml-2 mr-8">
-          <span className="underline font-bold text-white">Learn More</span>
-        </a>
-        <a
-          className="flex align-items-center no-underline justify-content-center border-circle text-gray-100 hover:bg-bluegray-700 cursor-pointer transition-colors transition-duration-150"
-          style={{ width: '2rem', height: '2rem' }}
-        >
-          <i className="pi pi-times"></i>
-        </a>
-      </div>
       <div className="surface-overlay py-3 px-6 shadow-2 flex align-items-center justify-content-between relative lg:static">
-        <img
-          src="assets/hyper.svg"
-          alt="hyper"
-          height={50}
-        />
+        <img src="assets/hyper.svg" alt="hyper" height={50} />
         <StyleClass
           nodeRef={rootBtnRef}
           selector="@next"
@@ -56,7 +37,7 @@ const LandingPage = () => {
         </StyleClass>
         <div className="align-items-center flex-grow-1 justify-content-between hidden lg:flex absolute lg:static w-full surface-overlay left-0 top-100 px-6 lg:px-0 z-2 shadow-2 lg:shadow-none">
           <section></section>
-          <ul className="list-none p-0 m-0 flex lg:align-items-center text-900 select-none flex-column lg:flex-row cursor-pointer">
+          {/* <ul className="list-none p-0 m-0 flex lg:align-items-center text-900 select-none flex-column lg:flex-row cursor-pointer">
             <li className="relative">
               <StyleClass
                 nodeRef={btnRef1}
@@ -155,12 +136,21 @@ const LandingPage = () => {
                 <Ripple />
               </a>
             </li>
-          </ul>
+          </ul> */}
           <div className="flex justify-content-between lg:block border-top-1 lg:border-top-none surface-border py-3 lg:py-0 mt-3 lg:mt-0">
-            <Button label="Login" className="p-button-text font-bold" />
+            <Button
+              label="Login"
+              className="p-button-text font-bold"
+              onClick={() => {
+                navigate('/login');
+              }}
+            />
             <Button
               label="Register"
               className="ml-3 p-button-outlined font-bold"
+              onClick={() => {
+                navigate('/login');
+              }}
             />
           </div>
         </div>
@@ -177,22 +167,26 @@ const LandingPage = () => {
             The Platform For
           </div>
           <div className="text-6xl text-primary font-bold mb-4">
-            Today's Generation
+            Today's Disaster Management Training
           </div>
-          <p
+          {/* <p
             className="mt-0 mb-4 line-height-3 text-center mx-auto text-white"
             style={{ maxWidth: '500px' }}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
             eiusmod tempor incididunt ut labore et dolore magna aliqua.
-          </p>
+          </p> */}
 
-          <Button label="Learn More" type="button" />
+          <Button
+            label="Learn More"
+            onClick={() => navigate('/disasters')}
+            type="button"
+          />
 
-          <p className="text-sm mt-4 mb-4 line-height-3 text-white">
+          {/* <p className="text-sm mt-4 mb-4 line-height-3 text-white">
             Available for MacOS, Web and Google accounts only
-          </p>
-          <div className="flex justify-content-center align-items-center">
+          </p> */}
+          {/* <div className="flex justify-content-center align-items-center">
             <a href="https://www.apple.com" className="text-white mr-3">
               <i className="pi pi-apple text-2xl"></i>
             </a>
@@ -202,7 +196,7 @@ const LandingPage = () => {
             <a href="https://www.facebook.com" className="text-white">
               <i className="pi pi-facebook text-2xl"></i>
             </a>
-          </div>
+          </div> */}
         </div>
       </div>
       <div className="surface-section px-4 py-8 md:px-6 lg:px-8">
@@ -224,7 +218,7 @@ const LandingPage = () => {
                 <i className="pi pi-desktop text-4xl text-blue-500"></i>
               </span>
               <div className="text-900 mb-3 font-medium">
-                Built for Developers
+                Built for Citizens
               </div>
               <span className="text-700 text-sm line-height-3">
                 Duis aute irure dolor in reprehenderit in voluptate velit esse
@@ -317,7 +311,7 @@ const LandingPage = () => {
               TAKE THE NEXT STEP
             </div>
             <div className="text-white font-medium text-5xl">
-              Enpower your customer experience
+              Empower your Citizens
             </div>
           </div>
           <div className="mt-4 mr-auto md:mt-0 md:mr-0">
@@ -392,7 +386,9 @@ const LandingPage = () => {
                 height={50}
                 className="mr-3"
               /> */}
-              <div className="text-gray-300 font-bold text-5xl">Bastion</div>
+              <div className="text-gray-300 font-bold text-5xl">
+                DisasterFix
+              </div>
             </div>
             <div className="col-12 md:col-3">
               <div
@@ -407,7 +403,7 @@ const LandingPage = () => {
               </div>
               <div className="text-white mb-3">
                 <i className="pi pi-inbox border-round p-1 mr-2"></i>
-                hello@bastion.co
+                hello@disasterfix.tech
               </div>
             </div>
             <div className="col-12 md:col-3 text-gray-200">
